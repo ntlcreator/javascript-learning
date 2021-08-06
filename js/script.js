@@ -79,95 +79,142 @@
 //         break;
 // }
 
-let num = 50;
+// let num = 50;
 
-// // цикл
-// while (num <= 55) {
+// // // цикл
+// // while (num <= 55) {
+// //     console.log(num);
+// //     num++;
+// // }
+
+// // do {
+// //     console.log(num);
+// //     num++;
+// // }
+
+// // while (num < 55);
+
+// for  (let i = 1; i < 8; i++) {
 //     console.log(num);
 //     num++;
 // }
 
-// do {
-//     console.log(num);
-//     num++;
+// for  (let i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         break;
+//     }
+
+//     console.log(i);
 // }
 
-// while (num < 55);
+// for  (let i = 1; i < 10; i++) {
+//     if (i % 2 === 0) {
+//         continue;
+//     }
 
-for  (let i = 1; i < 8; i++) {
-    console.log(num);
-    num++;
+//     console.log(i);
+// }
+// /* Задание на урок:
+
+// 1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+
+// 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+// отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+// возвращаем пользователя к вопросам опять
+
+// 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+// "Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+// "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+
+// 4) Потренироваться и переписать цикл еще двумя способами*/
+
+// const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', 'Количество фильмов');
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+
+
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', 'Властелин колец');
+//         const b = prompt('На сколько оцените его', 'от 0 до 10');
+//     if (a != null && a != '' && a.length < 50 && b != null && b != '') {
+//         console.log('true')
+//         personalMovieDB.movies[a] = b;
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+    
+// }
+
+// if (personalMovieDB.count < 10) {
+//     console.log('Просмотрено довольно мало фильмов');
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+//     console.log('Вы классический зритель');
+// } else if (personalMovieDB.count >= 30) {
+//     console.log('Вы киноман');
+// } else {
+//     console.log('Что то пошло не так');
+// }
+
+// // const a = prompt('Один из последних просмотренных фильмов?', 'Властелин колец');
+// // const b = prompt('На сколько оцените его', 'от 0 до 10');
+// // const c = prompt('Один из последних просмотренных фильмов?', 'Властелин колец');
+// // const d = prompt('На сколько оцените его', 'от 0 до 10');
+
+// // personalMovieDB.movies[a] = b;
+// // personalMovieDB.movies[c] = d;
+
+// console.log(personalMovieDB);
+
+"use strict";
+
+let num = 20; // данная переменная является глобальной
+
+function showFirstMessage(text) {
+    console.log(text);
+
+    // let num = 20; // Переменная внутри функции называется локальной и существует только внутри функции
+    let = 10;
 }
 
-for  (let i = 1; i < 10; i++) {
-    if (i === 6) {
-        break;
-    }
+showFirstMessage('Hello world!');
+console.log(num);
 
-    console.log(i);
+// function calc(a, b) {
+//     return (a + b);
+// };
+
+console.log(calc(9, 5));
+
+function ret() {
+    let num = 45;
+
+
+    //
+
+
+    return num;
 }
 
-for  (let i = 1; i < 10; i++) {
-    if (i % 2 === 0) {
-        continue;
-    }
-
-    console.log(i);
-}
-/* Задание на урок:
-
-1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
-
-2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
-отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
-возвращаем пользователя к вопросам опять
-
-3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
-"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
-"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
-
-4) Потренироваться и переписать цикл еще двумя способами*/
-
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', 'Количество фильмов');
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+const logger = function() {
+    console.log('Hello:)');
 };
 
+logger();
 
+// стрелочная функция
+const calculate = (a, b) => a + b; // данная запись сразу возвращает значания из функции
+//  (return и фигурные скобки не обязательны если функция записана в 1 строку)
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', 'Властелин колец');
-        const b = prompt('На сколько оцените его', 'от 0 до 10');
-    if (a != null && a != '' && a.length < 50 && b != null && b != '') {
-        console.log('true')
-        personalMovieDB.movies[a] = b;
-    } else {
-        console.log('error');
-        i--;
-    }
-    
-}
+const calculateMini = a => a + 4;
 
-if (personalMovieDB.count < 10) {
-    console.log('Просмотрено довольно мало фильмов');
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
-    console.log('Вы классический зритель');
-} else if (personalMovieDB.count >= 30) {
-    console.log('Вы киноман');
-} else {
-    console.log('Что то пошло не так');
-}
-
-// const a = prompt('Один из последних просмотренных фильмов?', 'Властелин колец');
-// const b = prompt('На сколько оцените его', 'от 0 до 10');
-// const c = prompt('Один из последних просмотренных фильмов?', 'Властелин колец');
-// const d = prompt('На сколько оцените его', 'от 0 до 10');
-
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-
-console.log(personalMovieDB);
+const calculate2 = (a, b) => {
+    console.log(1);
+    return a + b;
+};
